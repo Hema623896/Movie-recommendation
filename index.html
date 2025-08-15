@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Movie Explorer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>🎬 Movie Explorer</h1>
+    <form id="form" role="search" aria-label="Search movies">
+      <input
+        type="text"
+        id="search"
+        placeholder="Search for a movie..."
+        autocomplete="off"
+        aria-label="Search for a movie"
+      />
+    </form>
+
+    <fieldset id="filters" aria-label="Filter movies">
+      <legend>Filters</legend>
+      <label for="genreFilter">Genre:</label>
+      <select id="genreFilter">
+        <option value="">All Genres</option>
+      </select>
+
+      <label for="languageFilter">Language:</label>
+      <select id="languageFilter">
+        <option value="">All Languages</option>
+      </select>
+
+      <button type="button" id="applyFilters">Apply Filters</button>
+    </fieldset>
+  </header>
+
+  <main>
+    <div id="main" class="movie-container"></div>
+    <div id="loading" class="hidden">Loading...</div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Movie Explorer. Powered by TMDB.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
